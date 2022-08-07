@@ -363,22 +363,24 @@
                 <div class="text">
                     <h5>Gracias por dedicar un poco de tu tiempo para escribirme.</h5>
                 </div>
+                <!-- <form name="contact-form" action="https://formsubmit.co/jonathan24.dp@gmail.com" method="POST"> -->
                 <form name="contact-form" netlify>
                     <div class="row align-items-center">
                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-name">
-                            <input type="text" class="form-control" id="name" placeholder="Nombre">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-email">
-                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                         </div>
                         <div class="mb-3 input-group-lg c-subject">
-                            <input type="text" class="form-control" id="subject" placeholder="Asunto">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto">
                         </div>
                         <div class="mb-3 input-group-lg c-message">
-                            <textarea class="form-control" id="message" rows="8" placeholder="Mensaje"></textarea>
+                            <textarea class="form-control" id="message" rows="8" name="message" placeholder="Mensaje">
+                            </textarea>
                         </div>
                         <div class="row btn-enviar">
-                            <button type="submit" class="btn btn-3 hover-border-1">
+                            <button id="btn-enviar-correo" type="submit" class="btn btn-3 hover-border-1">
                                 <span>Enviar</span>
                             </button>
                         </div>
