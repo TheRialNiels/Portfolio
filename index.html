@@ -18,7 +18,7 @@
 
 <body>
     <div class="navbar-section">
-        <nav class="navbar navbar-expand-lg fixed-top bg-third">
+        <nav class="navbar navbar-expand-lg fixed-top bg-third" id="navbar-menu">
             <div class="container">
                 <!-- Icono -->
                 <a class="navbar-brand" href="#">
@@ -30,360 +30,366 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="nav nav-pills me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Sobre mi</a>
+                            <a class="nav-link" href="#about-title">Sobre mi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Portafolio</a>
+                            <a class="nav-link" href="#project-title">Portafolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="#contact-title">Contacto</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
-    <!--Header starts-->
-    <div class="header">
-        <!--Content before waves-->
-        <div class="inner-header flex">
-            <div class="texto">
-                <h1>Jonathan Dominguez Patiño</h1>
-                <h3>Estudiante en Ingenieria en Software</h3>
-                <h5>!Listo para codificar lo que necesites!</h5>
-            </div>
-        </div>
-        <!--Waves Container-->
-        <div>
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                    <path id="gentle-wave"
-                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(4, 112, 96, 0.7)" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(4, 112, 96, 0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(4, 112, 96, 0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#047060" />
-                </g>
-            </svg>
-        </div>
-        <!--Waves end-->
-    </div>
-    <div class="content flex">
-    </div>
-    <!--Header ends-->
-    <div class="about section">
-        <section class="container">
-            <div class="row">
-                <div class="title">
-                    <h1>Acerca de mi</h1>
-                </div>
-                <div class="card card-about">
-                    <div class="card-body">
-                        <p>
-                            Estudiante de Ingeniería en Software, responsable, comprometido con el trabajo, capaz de
-                            trabajar bajo estrés y dispuesto a aprender nuevas tecnologías.
-                        </p>
-                        <p>
-                            Disfruto el codificar nuevas cosas, con el objetivo de desarrollar apps y así mejorar como
-                            desarrollador día con día.
-                        </p>
-                    </div>
-                </div>
-                <div class="skills-text">
-                    <h3>Skills</h3>
-                </div>
-                <div class="skills-section">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                            <div class="skill-img-container">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="./assets/images/C++_Logo.png"
-                                            class="img-fluid rounded-start skill-logo" alt="..."
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            data-bs-custom-class="custom-tooltip" data-bs-title="C++">
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="progress mb-2" style="height: 15px;">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                role="progressbar" aria-label="Basic example" style="width: 60%"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                            <div class="skill-img-container">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="./assets/images/java-logo.png"
-                                            class="img-fluid rounded-start skill-logo" alt="..."
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            data-bs-custom-class="custom-tooltip" data-bs-title="Java">
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="progress mb-2" style="height: 15px;">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                role="progressbar" aria-label="Basic example" style="width: 60%"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                            <div class="skill-img-container">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="./assets/images/Python-logo.png"
-                                            class="img-fluid rounded-start skill-logo" alt="..."
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            data-bs-custom-class="custom-tooltip" data-bs-title="Python">
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="progress mb-2" style="height: 15px;">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                role="progressbar" aria-label="Basic example" style="width: 50%"
-                                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                            <div class="skill-img-container">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="./assets/images/c-sharp.png"
-                                            class="img-fluid rounded-start skill-logo" alt="..."
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            data-bs-custom-class="custom-tooltip" data-bs-title="C Sharp">
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="progress mb-2" style="height: 15px;">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                role="progressbar" aria-label="Basic example" style="width: 60%"
-                                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                            <div class="skill-img-container">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="./assets/images/MySQL-logo.png"
-                                            class="img-fluid rounded-start skill-logo" alt="..."
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            data-bs-custom-class="custom-tooltip" data-bs-title="MySQL">
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="progress mb-2" style="height: 15px;">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                role="progressbar" aria-label="Basic example" style="width: 80%"
-                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                            <div class="skill-img-container">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="./assets/images/PHP-logo.png"
-                                            class="img-fluid rounded-start skill-logo" alt="..."
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            data-bs-custom-class="custom-tooltip" data-bs-title="PHP">
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="progress mb-2" style="height: 15px;">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                role="progressbar" aria-label="Basic example" style="width: 75%"
-                                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                            <div class="skill-img-container">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="./assets/images/html-logo.png"
-                                            class="img-fluid rounded-start skill-logo" alt="..."
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            data-bs-custom-class="custom-tooltip" data-bs-title="HTML">
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="progress mb-2" style="height: 15px;">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                role="progressbar" aria-label="Basic example" style="width: 100%"
-                                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                            <div class="skill-img-container">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="./assets/images/css-logo.png"
-                                            class="img-fluid rounded-start skill-logo" alt="..."
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            data-bs-custom-class="custom-tooltip" data-bs-title="CSS">
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="progress mb-2" style="height: 15px;">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                role="progressbar" aria-label="Basic example" style="width: 70%"
-                                                aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
-                            <div class="skill-img-container">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="./assets/images/Bootstrap_logo.png"
-                                            class="img-fluid rounded-start skill-logo" alt="..."
-                                            data-bs-toggle="tooltip" data-bs-placement="top"
-                                            data-bs-custom-class="custom-tooltip" data-bs-title="Bootstrap">
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="progress mb-2" style="height: 15px;">
-                                            <div class="progress-bar progress-bar-striped progress-bar-animated"
-                                                role="progressbar" aria-label="Basic example" style="width: 75%"
-                                                aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scrollspy-example rounded-2" tabindex="0">
+        <!--Header starts-->
+        <div class="header">
+            <!--Content before waves-->
+            <div class="inner-header flex">
+                <div class="texto">
+                    <h1>Jonathan Dominguez Patiño</h1>
+                    <h3>Estudiante en Ingenieria en Software</h3>
+                    <h5>!Listo para codificar lo que necesites!</h5>
                 </div>
             </div>
-        </section>
-    </div>
-    <div class="project section">
-        <section class="container">
-            <div class="row">
+            <!--Waves Container-->
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(4, 112, 96, 0.7)" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(4, 112, 96, 0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(4, 112, 96, 0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#047060" />
+                    </g>
+                </svg>
+            </div>
+            <!--Waves end-->
+        </div>
+        <div class="content flex">
+        </div>
+        <!--Header ends-->
+        <div class="about section">
+            <section class="container">
+                <div class="row">
+                    <div class="title">
+                        <h1 id="about-title">Acerca de mi</h1>
+                    </div>
+                    <div class="card card-about">
+                        <div class="card-body">
+                            <p>
+                                Estudiante de Ingeniería en Software, responsable, comprometido con el trabajo, capaz de
+                                trabajar bajo estrés y dispuesto a aprender nuevas tecnologías.
+                            </p>
+                            <p>
+                                Disfruto el codificar nuevas cosas, con el objetivo de desarrollar apps y así mejorar
+                                como
+                                desarrollador día con día.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="skills-text">
+                        <h3>Skills</h3>
+                    </div>
+                    <div class="skills-section">
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                                <div class="skill-img-container">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <img src="./assets/images/C++_Logo.png"
+                                                class="img-fluid rounded-start skill-logo" alt="..."
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-custom-class="custom-tooltip" data-bs-title="C++">
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="progress mb-2" style="height: 15px;">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" aria-label="Basic example" style="width: 60%"
+                                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                                <div class="skill-img-container">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <img src="./assets/images/java-logo.png"
+                                                class="img-fluid rounded-start skill-logo" alt="..."
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-custom-class="custom-tooltip" data-bs-title="Java">
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="progress mb-2" style="height: 15px;">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" aria-label="Basic example" style="width: 60%"
+                                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                                <div class="skill-img-container">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <img src="./assets/images/Python-logo.png"
+                                                class="img-fluid rounded-start skill-logo" alt="..."
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-custom-class="custom-tooltip" data-bs-title="Python">
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="progress mb-2" style="height: 15px;">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" aria-label="Basic example" style="width: 50%"
+                                                    aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                                <div class="skill-img-container">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <img src="./assets/images/c-sharp.png"
+                                                class="img-fluid rounded-start skill-logo" alt="..."
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-custom-class="custom-tooltip" data-bs-title="C Sharp">
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="progress mb-2" style="height: 15px;">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" aria-label="Basic example" style="width: 60%"
+                                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                                <div class="skill-img-container">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <img src="./assets/images/MySQL-logo.png"
+                                                class="img-fluid rounded-start skill-logo" alt="..."
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-custom-class="custom-tooltip" data-bs-title="MySQL">
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="progress mb-2" style="height: 15px;">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" aria-label="Basic example" style="width: 80%"
+                                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                                <div class="skill-img-container">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <img src="./assets/images/PHP-logo.png"
+                                                class="img-fluid rounded-start skill-logo" alt="..."
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-custom-class="custom-tooltip" data-bs-title="PHP">
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="progress mb-2" style="height: 15px;">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" aria-label="Basic example" style="width: 75%"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                                <div class="skill-img-container">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <img src="./assets/images/html-logo.png"
+                                                class="img-fluid rounded-start skill-logo" alt="..."
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-custom-class="custom-tooltip" data-bs-title="HTML">
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="progress mb-2" style="height: 15px;">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" aria-label="Basic example" style="width: 100%"
+                                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">100%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                                <div class="skill-img-container">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <img src="./assets/images/css-logo.png"
+                                                class="img-fluid rounded-start skill-logo" alt="..."
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-custom-class="custom-tooltip" data-bs-title="CSS">
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="progress mb-2" style="height: 15px;">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" aria-label="Basic example" style="width: 70%"
+                                                    aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                                <div class="skill-img-container">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <img src="./assets/images/Bootstrap_logo.png"
+                                                class="img-fluid rounded-start skill-logo" alt="..."
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                data-bs-custom-class="custom-tooltip" data-bs-title="Bootstrap">
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="progress mb-2" style="height: 15px;">
+                                                <div class="progress-bar progress-bar-striped progress-bar-animated"
+                                                    role="progressbar" aria-label="Basic example" style="width: 75%"
+                                                    aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="project section">
+            <section class="container">
+                <div class="row">
+                    <div class="title">
+                        <h1 id="project-title">Proyectos</h1>
+                    </div>
+                    <div class="text">
+                        <h5>Algunos proyectos que he realizado</h5>
+                    </div>
+                    <div class="col-md" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500">
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                                <div class="img-container">
+                                    <figure>
+                                        <img src="./assets/images/Proy1.png" class="img-fluid" alt="...">
+                                        <div class="img-proy">
+                                            <button type="button" class="btn btn-3 hover-border-1"
+                                                data-bs-toggle="modal" data-bs-target="#modal-proyect-1">
+                                                <span>Ver Proyecto</span>
+                                            </button>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                                <div class="img-container">
+                                    <figure>
+                                        <img src="./assets/images/Proy2.png" class="img-fluid" alt="...">
+                                        <div class="img-proy">
+                                            <button type="button" class="btn btn-3 hover-border-1"
+                                                data-bs-toggle="modal" data-bs-target="#modal-proyect-2">
+                                                <span>Ver Proyecto</span>
+                                            </button>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                                <div class="img-container">
+                                    <figure>
+                                        <img src="./assets/images/Proy3.png" class="img-fluid" alt="...">
+                                        <div class="img-proy">
+                                            <button type="button" class="btn btn-3 hover-border-1"
+                                                data-bs-toggle="modal" data-bs-target="#modal-proyect-3">
+                                                <span>Ver Proyecto</span>
+                                            </button>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                                <div class="img-container">
+                                    <figure>
+                                        <img src="./assets/images/Proy4.png" class="img-fluid" alt="...">
+                                        <div class="img-proy">
+                                            <button type="button" class="btn btn-3 hover-border-1"
+                                                data-bs-toggle="modal" data-bs-target="#modal-proyect-4">
+                                                <span>Ver Proyecto</span>
+                                            </button>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="contact section">
+            <section class="container">
                 <div class="title">
-                    <h1>Proyectos</h1>
+                    <h1 id="contact-title">Contacto</h1>
                 </div>
                 <div class="text">
-                    <h5>Algunos proyectos que he realizado</h5>
+                    <h5>Gracias por dedicar un poco de tu tiempo para escribirme.</h5>
                 </div>
-                <div class="col-md" data-aos="fade-up" data-aos-offset="200" data-aos-duration="500">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                            <div class="img-container">
-                                <figure>
-                                    <img src="./assets/images/Proy1.png" class="img-fluid" alt="...">
-                                    <div class="img-proy">
-                                        <button type="button" class="btn btn-3 hover-border-1" data-bs-toggle="modal"
-                                            data-bs-target="#modal-proyect-1">
-                                            <span>Ver Proyecto</span>
-                                        </button>
-                                    </div>
-                                </figure>
-                            </div>
+                <form name="contact-form" netlify>
+                    <div class="row align-items-center">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-name">
+                            <input type="text" class="form-control" id="name" placeholder="Nombre">
                         </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                            <div class="img-container">
-                                <figure>
-                                    <img src="./assets/images/Proy2.png" class="img-fluid" alt="...">
-                                    <div class="img-proy">
-                                        <button type="button" class="btn btn-3 hover-border-1" data-bs-toggle="modal"
-                                            data-bs-target="#modal-proyect-2">
-                                            <span>Ver Proyecto</span>
-                                        </button>
-                                    </div>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                            <div class="img-container">
-                                <figure>
-                                    <img src="./assets/images/Proy3.png" class="img-fluid" alt="...">
-                                    <div class="img-proy">
-                                        <button type="button" class="btn btn-3 hover-border-1" data-bs-toggle="modal"
-                                            data-bs-target="#modal-proyect-3">
-                                            <span>Ver Proyecto</span>
-                                        </button>
-                                    </div>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                            <div class="img-container">
-                                <figure>
-                                    <img src="./assets/images/Proy4.png" class="img-fluid" alt="...">
-                                    <div class="img-proy">
-                                        <button type="button" class="btn btn-3 hover-border-1" data-bs-toggle="modal"
-                                            data-bs-target="#modal-proyect-4">
-                                            <span>Ver Proyecto</span>
-                                        </button>
-                                    </div>
-                                </figure>
-                            </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-email">
+                            <input type="email" class="form-control" id="email" placeholder="Email">
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="contact section">
-        <section class="container">
-            <div class="title">
-                <h1>Contacto</h1>
-            </div>
-            <div class="text">
-                <h5>Gracias por dedicar un poco de tu tiempo para escribirme.</h5>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-name">
-                    <input type="text" class="form-control" id="name" placeholder="Nombre">
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-email">
-                    <input type="email" class="form-control" id="email" placeholder="Email">
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="mb-3 input-group-lg c-subject">
-                    <input type="text" class="form-control" id="subject" placeholder="Asunto">
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="mb-3 input-group-lg c-message">
-                    <textarea class="form-control" id="message" rows="8" placeholder="Mensaje"></textarea>
-                </div>
-            </div>
-            <div class="row btn-enviar">
-                <button type="submit" class="btn btn-3 hover-border-1">
-                    <span>Enviar</span>
-                </button>
-            </div>
-        </section>
+                    <div class="row align-items-center">
+                        <div class="mb-3 input-group-lg c-subject">
+                            <input type="text" class="form-control" id="subject" placeholder="Asunto">
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="mb-3 input-group-lg c-message">
+                            <textarea class="form-control" id="message" rows="8" placeholder="Mensaje"></textarea>
+                        </div>
+                    </div>
+                    <div class="row btn-enviar">
+                        <button type="submit" class="btn btn-3 hover-border-1">
+                            <span>Enviar</span>
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
     </div>
 
     <footer>
@@ -594,16 +600,6 @@
                             Me sirve para seguir aplicando lo aprendido y demostrar mis habilidades al desarrollar
                             apps a pesar de ser proyectos pequeños.
                         </h5>
-                    </div>
-                    <div class="col-12 video-text">
-                        <h3>Video</h3>
-                    </div>
-                    <div class="col-12 video2">
-                        <iframe class="video-frame" src="https://www.youtube.com/embed/C7erOg9YJV8" title="YouTube"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
                     </div>
                 </div>
             </div>
