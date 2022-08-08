@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./assets/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <title>Jonathan Dominguez | Software Engineer</title>
+    <link rel="stylesheet" href="./assets/Bootstrap/bootstrap-sweetalert/sweet-alert.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +18,8 @@
 </head>
 
 <body>
-    <div class="navbar-section">
-        <nav class="navbar navbar-expand-lg fixed-top bg-third" id="navbar-menu">
+    <!-- <nav class="navbar navbar-expand-lg fixed-top bg-third" id="navbar-menu">
             <div class="container">
-                <!-- Icono -->
                 <a class="navbar-brand" href="#">
                     <img src="assets/images/J-Logo.png" alt="" width="50" class="d-inline-block align-text-top">
                 </a>
@@ -43,12 +42,40 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-    </div>
+        </nav> -->
+    <nav class="navbar navbar-expand-custom navbar-mainbg fixed-top">
+        <img class="navbar-brand navbar-logo" src="assets/images/J-Logo.png" alt="" width="50"
+            class="d-inline-block align-text-top">
+        <!-- <a class="navbar-brand navbar-logo" href="#">JDP</a> -->
+        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <div class="hori-selector">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#inicio-title"><i class="far fa-user"></i></i>Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about-title"><i class="far fa-user"></i></i>Acerca de mi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#project-title"><i class="fa fa-briefcase"></i>Portafolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact-title"><i class="far fa-envelope"></i></i>Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-root-margin="0px 0px -40%"
         data-bs-smooth-scroll="true" class="scrollspy-example rounded-2" tabindex="0">
         <!--Header starts-->
-        <div class="header">
+        <div id="inicio-title" class="header">
             <!--Content before waves-->
             <div class="inner-header flex">
                 <div class="texto">
@@ -363,29 +390,27 @@
                 <div class="text">
                     <h5>Gracias por dedicar un poco de tu tiempo para escribirme.</h5>
                 </div>
-                <!-- <form name="contact-form" action="https://formsubmit.co/jonathan24.dp@gmail.com" method="POST"> -->
-                <form name="contact-form" netlify>
-                    <div class="row align-items-center">
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-name">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-email">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                        </div>
-                        <div class="mb-3 input-group-lg c-subject">
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto">
-                        </div>
-                        <div class="mb-3 input-group-lg c-message">
-                            <textarea class="form-control" id="message" rows="8" name="message" placeholder="Mensaje">
-                            </textarea>
-                        </div>
-                        <div class="row btn-enviar">
-                            <button id="btn-enviar-correo" type="submit" class="btn btn-3 hover-border-1">
-                                <span>Enviar</span>
-                            </button>
-                        </div>
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-name">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
                     </div>
-                </form>
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="mb-3 input-group-lg c-subject">
+                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto">
+                    </div>
+                    <div class="mb-3 input-group-lg c-message">
+                        <textarea class="form-control" id="message" rows="8" name="message"
+                            placeholder="Mensaje"></textarea>
+                    </div>
+                    <div class="row btn-enviar">
+                        <button onClick="EnviarCorreo();" id="btn-enviar-correo" type="submit"
+                            class="btn btn-3 hover-border-1">
+                            <span>Enviar</span>
+                        </button>
+                    </div>
+                </div>
             </section>
         </div>
     </div>
@@ -399,6 +424,10 @@
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/Bootstrap/bootstrap-sweetalert/sweet-alert.js"></script>
+    <script src="./assets/js/jquery.sweet-alert.init.js"></script>
+    <script src="./assets/js/app.js"></script>
     <script>
         AOS.init();
     </script>
