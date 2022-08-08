@@ -77,23 +77,217 @@
     --background-color-rgb: rgb(7, 81, 128);
     --background-color-rgba: rgba(7, 81, 128, 1);
     --background-color-rgba-0-6: rgba(7, 81, 128, 0.6);
+    --background-color-rgba-0-5: rgba(7, 81, 128, 0.5);
 
     --figures-color: white;
     --text-color: white;
-}
-
-body {
-    margin: 0;
-    background: var(--background-color);
 }
 
 .bg-third {
     background: var(--primary-color);
 }
 
-.navbar {
+/* .navbar {
     border-bottom: 1px solid var(--figures-color);
+} */
+
+/* START - Navbar */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--background-color);
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    margin-right: 10px;
+}
+
+/*----------bootstrap-navbar-css------------*/
+.navbar-logo {}
+
+.navbar-mainbg {
+    background-color: var(--primary-color);
+    padding: 0px;
+}
+
+#navbarSupportedContent {
+    overflow: hidden;
+    position: relative;
+}
+
+#navbarSupportedContent ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+#navbarSupportedContent ul li a i {
+    margin-right: 10px;
+}
+
+#navbarSupportedContent li {
+    list-style-type: none;
+    float: left;
+}
+
+#navbarSupportedContent ul li a {
+    color: var(--background-color-0-5);
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 20px 20px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+}
+
+#navbarSupportedContent>ul>li.active>a {
+    color: var(--primary-color);
+    background-color: transparent;
+    transition: all 0.7s;
+}
+
+#navbarSupportedContent a:not(:only-child):after {
+    content: "\f105";
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 14px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+#navbarSupportedContent .active>a:not(:only-child):after {
+    transform: rotate(90deg);
+}
+
+.hori-selector {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background-color: var(--background-color);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top: 10px;
+}
+
+.hori-selector .right,
+.hori-selector .left {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: var(--background-color);
+    bottom: 10px;
+}
+
+.hori-selector .right {
+    right: -25px;
+}
+
+.hori-selector .left {
+    left: -25px;
+}
+
+.hori-selector .right:before,
+.hori-selector .left:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.hori-selector .right:before {
+    bottom: 0;
+    right: -25px;
+}
+
+.hori-selector .left:before {
+    bottom: 0;
+    left: -25px;
+}
+
+
+@media(min-width: 992px) {
+    .navbar-expand-custom {
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
+
+    .navbar-expand-custom .navbar-nav {
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
+
+    .navbar-expand-custom .navbar-collapse {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    }
+}
+
+
+@media (max-width: 991px) {
+    #navbarSupportedContent ul li a {
+        padding: 12px 30px;
+    }
+
+    .hori-selector {
+        margin-top: 0px;
+        margin-left: 10px;
+        border-radius: 0;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+
+    .hori-selector .left,
+    .hori-selector .right {
+        right: 10px;
+    }
+
+    .hori-selector .left {
+        top: -25px;
+        left: auto;
+    }
+
+    .hori-selector .right {
+        bottom: -25px;
+    }
+
+    .hori-selector .left:before {
+        left: -25px;
+        top: -25px;
+    }
+
+    .hori-selector .right:before {
+        bottom: -25px;
+        left: -25px;
+    }
+}
+
+/* END - Navbar */
+
 
 /* START - Header */
 .header {
@@ -110,7 +304,6 @@ body {
 }
 
 .flex {
-    /*Flexbox for containers*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,15 +353,6 @@ body {
 }
 
 .inner-header.flex h1 {
-    /* 
-    font-family: 'Alumni Sans Inline One';
-    font-family: 'Bangers';
-    font-family: 'Bungee';
-    font-family: 'Monoton';
-    font-family: 'Mouse Memoirs';
-    font-family: 'Permanent Marker';
-    font-family: 'Rubik Mono One'; 
-    */
     font-family: 'Bungee';
 }
 
@@ -185,7 +369,6 @@ body {
     width: 100%;
     height: 15vh;
     margin-bottom: -7px;
-    /*Fix for safari gap*/
     min-height: 100px;
     max-height: 150px;
 }
@@ -250,21 +433,13 @@ body {
 
 /* END - Header */
 
+
 /* START - Global Settings */
 .section {
     padding-top: 50px;
 }
 
 .title h1 {
-    /* 
-    font-family: 'Alumni Sans Inline One';
-    font-family: 'Bangers';
-    font-family: 'Bungee';
-    font-family: 'Monoton';
-    font-family: 'Mouse Memoirs';
-    font-family: 'Permanent Marker';
-    font-family: 'Rubik Mono One'; 
-    */
     color: var(--main-color);
     font-weight: bold;
     width: 100%;
@@ -287,7 +462,6 @@ body {
 
 /* START - About */
 .about.section .container .row .card.card-about {
-    /* background-color: var(--third-color); */
     background: radial-gradient(var(--third-color-rgba) 25%, var(--primary-color-rgba) 100%);
     width: 80%;
     height: 250px;
@@ -389,7 +563,6 @@ body {
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0px 5px 10px var(--secondary-color-rgba);
-    /* box-shadow: 20px 20px 50px var(--secondary-color-rgba); */
     cursor: pointer;
 }
 
@@ -773,6 +946,10 @@ button.btn.hover-border-1:hover::after {
 .form-control::placeholder {
     color: var(--text-color);
     opacity: 1;
+}
+
+.message-input {
+    resize: none;
 }
 
 .contact.section .container .row.btn-enviar {
