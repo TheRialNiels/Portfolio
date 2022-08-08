@@ -6,7 +6,7 @@ function EnviarCorreo() {
 
     if (nombre != "" && email != "" && asunto != "" && mensaje != "") {
         $.ajax({
-            url: 'https://formsubmit.co/ajax/jonathan24.dp@gmail.com',
+            url: 'https://formsubmit.co/ajax/41aa9415c1a6a44e10be761b5f78a569',
             type: 'POST',
             dataType: 'json',
             accepts: 'application/json',
