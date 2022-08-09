@@ -9,7 +9,6 @@
     <title>Jonathan Dominguez | Software Engineer</title>
     <link rel="stylesheet" href="./assets/Bootstrap/bootstrap-sweetalert/sweet-alert.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/style2.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,274 +20,229 @@
 
 <body>
     <nav class="navbar navbar-expand-custom navbar-mainbg fixed-top">
-        <a class="navbar-brand" href="#home"><img class="navbar-logo" src="./assets/images/J-Logo.png"></a>
-        <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <i class="fas fa-bars text-white"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-                <div class="hori-selector">
-                    <div class="left"></div>
-                    <div class="right"></div>
-                </div>
-                <li class="nav-item">
-                    <a class="nav-link active" href="#home"><i class="far fa-user"></i></i>Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about"><i class="far fa-user"></i></i>Acerca de mi</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio"><i class="fa fa-briefcase"></i>Portafolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact"><i class="far fa-envelope"></i></i>Contacto</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container-fluid">
-
-        <div id="home" class="row cover top">
-            <div class="col-xs-12">
-                <div class="row">
-                    <div class="col-xs-12 headline">
-                        <h1 class="text-center">Hola!, Yo soy Jonathan Dominguez</h1>
-                        <p class="lead text-center">Estudiante de Ingenieria en Software.</p>
+        <section class="container">
+            <a class="navbar-brand" href="#home"><img class="navbar-logo" src="./assets/images/J-Logo.png"></a>
+            <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <div class="hori-selector">
+                        <div class="left"></div>
+                        <div class="right"></div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 center-block text-center">
-                        <!-- <a href="#about"><span id="scrollIcon" class="glyphicon glyphicon-menu-down"
-                                aria-hidden="true"></span></a> -->
-                        <a href="#about"><i id="scrollIcon" class="fa-solid fa-circle-arrow-down"></i></a>
-                    </div>
-                </div>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home"><i class="far fa-user"></i></i>Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about"><i class="far fa-user"></i></i>Acerca de mi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio"><i class="fa fa-briefcase"></i>Portafolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="far fa-envelope"></i></i>Contacto</a>
+                    </li>
+                </ul>
             </div>
+        </section>
+    </nav>
+
+    <div class="page-content">
+        <div id="home" class="row cover top">
+            <section class="container">
+                <div class="col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-12 headline">
+                            <h1 class="text-center">Hola!, Yo soy Jonathan Dominguez</h1>
+                            <p class="lead text-center">Estudiante de Ingenieria en Software.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 center-block text-center">
+                            <a href="#about"><i id="scrollIcon" class="fa-solid fa-circle-arrow-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <div id="about" class="row cover">
-            <h2 class="text-center">Acerca de Mi</h2>
-            <div class="col-md-6 text-center about-info">
-                <img class="img-circle text-center profile-img" src="./assets/images/avatars/avatar6.png">
-                <p class="text-center">
-                    Estudiante de Ingeniería en Software, responsable, comprometido con el trabajo,
-                    capaz de trabajar bajo estrés y dispuesto a aprender nuevas tecnologías.
-                </p>
-                <p class="text-center">
-                    Disfruto el codificar nuevas cosas, con el objetivo de desarrollar apps
-                    y así mejorar como desarrollador día con día.
-                </p>
-            </div>
-            <div class="col-md-6 about-tools">
-                <div id="page_wrap">
-                    <p class="text-center">Hobbies</p>
-                    <div class="banner">
-                        <div class="typed_wrap">
-                            <h1>Me Gusta <span class="typed"></span></h1>
+            <section class="container">
+                <h2 class="text-center">Acerca de Mi</h2>
+                <div class="contaniner">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center about-info">
+                            <img class="img-circle text-center profile-img" src="./assets/images/avatars/avatar6.png">
+                            <p class="text-center">
+                                Estudiante de Ingeniería en Software, responsable, comprometido con el trabajo,
+                                capaz de trabajar bajo estrés y dispuesto a aprender nuevas tecnologías.
+                            </p>
+                            <p class="text-center">
+                                Disfruto el codificar nuevas cosas, con el objetivo de desarrollar apps
+                                y así mejorar como desarrollador día con día.
+                            </p>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 about-tools">
+                            <div id="page_wrap">
+                                <p class="text-center">Hobbies</p>
+                                <div class="banner">
+                                    <div class="typed_wrap">
+                                        <h1>Me Gusta <span class="typed"></span></h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row break justify-content-center">
+                            <div class="col-12 about-last">
+                                <p id="scrollPortfolio" class="text-center">Dale un vistazo a mis proyectos recientes
+                                    <span id="scrollProjects" class="glyphicon glyphicon-arrow-down"></span>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row break justify-content-center">
-                <div class="col-md-6 about-last">
-                    <p id="scrollPortfolio" class="text-center">Dale un vistazo a mis proyectos recientes <span
-                            id="scrollProjects" class="glyphicon glyphicon-arrow-down"></span></p>
-                </div>
-            </div>
-        </div><!-- End #About -->
+            </section>
+        </div>
 
         <div id="portfolio" class="row cover">
-            <h2 class="text-center">Portfolio</h2>
-            <div class="container">
-                <div class="row portfolio-projects">
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                        <div class="img-container">
-                            <figure>
-                                <img src="./assets/images/Proy1.png" class="img-fluid" alt="...">
-                                <div class="img-proy">
-                                    <button type="button" class="btn btn-3 hover-border-1" data-bs-toggle="modal"
-                                        data-bs-target="#modal-proyect-1">
-                                        <span>Ver Proyecto</span>
-                                    </button>
-                                </div>
-                            </figure>
+            <section class="container">
+                <h2 class="text-center">Portfolio</h2>
+                <div class="container">
+                    <div class="row portfolio-projects">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <div class="img-container">
+                                <figure>
+                                    <img src="./assets/images/Proy1.png" class="img-fluid" alt="...">
+                                    <div class="img-proy">
+                                        <button type="button" class="btn btn-3 hover-border-1" data-bs-toggle="modal"
+                                            data-bs-target="#modal-proyect-1">
+                                            <span>Ver Proyecto</span>
+                                        </button>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <div class="img-container">
+                                <figure>
+                                    <img src="./assets/images/Proy2.png" class="img-fluid" alt="...">
+                                    <div class="img-proy">
+                                        <button type="button" class="btn btn-3 hover-border-1" data-bs-toggle="modal"
+                                            data-bs-target="#modal-proyect-2">
+                                            <span>Ver Proyecto</span>
+                                        </button>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <div class="img-container">
+                                <figure>
+                                    <img src="./assets/images/Proy3.png" class="img-fluid" alt="...">
+                                    <div class="img-proy">
+                                        <button type="button" class="btn btn-3 hover-border-1" data-bs-toggle="modal"
+                                            data-bs-target="#modal-proyect-3">
+                                            <span>Ver Proyecto</span>
+                                        </button>
+                                    </div>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                            <div class="img-container">
+                                <figure>
+                                    <img src="./assets/images/Proy4.png" class="img-fluid" alt="...">
+                                    <div class="img-proy">
+                                        <button type="button" class="btn btn-3 hover-border-1" data-bs-toggle="modal"
+                                            data-bs-target="#modal-proyect-4">
+                                            <span>Ver Proyecto</span>
+                                        </button>
+                                    </div>
+                                </figure>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                        <div class="img-container">
-                            <figure>
-                                <img src="./assets/images/Proy2.png" class="img-fluid" alt="...">
-                                <div class="img-proy">
-                                    <button type="button" class="btn btn-3 hover-border-1" data-bs-toggle="modal"
-                                        data-bs-target="#modal-proyect-2">
-                                        <span>Ver Proyecto</span>
-                                    </button>
-                                </div>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                        <div class="img-container">
-                            <figure>
-                                <img src="./assets/images/Proy3.png" class="img-fluid" alt="...">
-                                <div class="img-proy">
-                                    <button type="button" class="btn btn-3 hover-border-1" data-bs-toggle="modal"
-                                        data-bs-target="#modal-proyect-3">
-                                        <span>Ver Proyecto</span>
-                                    </button>
-                                </div>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                        <div class="img-container">
-                            <figure>
-                                <img src="./assets/images/Proy4.png" class="img-fluid" alt="...">
-                                <div class="img-proy">
-                                    <button type="button" class="btn btn-3 hover-border-1" data-bs-toggle="modal"
-                                        data-bs-target="#modal-proyect-4">
-                                        <span>Ver Proyecto</span>
-                                    </button>
-                                </div>
-                            </figure>
-                        </div>
-                    </div>
-                    <!-- <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                        <img class="portfolio-projects--image" src="https://sonorangirl.github.io/img/slice-quotes.png">
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                        <img class="portfolio-projects--image" src="https://sonorangirl.github.io/img/slice-quotes.png">
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                        <img class="img-rounded portfolio-projects--image"
-                            src="https://sonorangirl.github.io/img/slice-task-timer.png">
-                    </div> -->
                 </div>
-                <!--end Two project row-->
-            </div>
-        </div><!-- End #Portfolio -->
+            </section>
+        </div>
 
         <div id="contact" class="row cover">
-            <h2 class="text-center contact-header">Contacto</h2>
-            <h5 class="text-center">Gracias por dedicar un poco de tu tiempo para escribirme.</h5>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-name">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
+            <section class="container">
+                <h2 class="text-center contact-header">Contacto</h2>
+                <h5 class="text-center">Gracias por dedicar un poco de tu tiempo para escribirme.</h5>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-name">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-email">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="mb-3 input-group-lg c-subject">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto">
+                        </div>
+                        <div class="mb-3 input-group-lg c-message">
+                            <textarea class="form-control" id="message" rows="8" name="message"
+                                placeholder="Mensaje"></textarea>
+                        </div>
+                        <div class="row btn-enviar">
+                            <button onClick="EnviarCorreo();" id="btn-enviar-correo" type="submit"
+                                class="btn btn-3 hover-border-1">
+                                <span>Enviar</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-email">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
-                    </div>
-                    <div class="mb-3 input-group-lg c-subject">
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto">
-                    </div>
-                    <div class="mb-3 input-group-lg c-message">
-                        <textarea class="form-control" id="message" rows="8" name="message"
-                            placeholder="Mensaje"></textarea>
-                    </div>
-                    <div class="row btn-enviar">
-                        <button onClick="EnviarCorreo();" id="btn-enviar-correo" type="submit"
-                            class="btn btn-3 hover-border-1">
-                            <span>Enviar</span>
-                        </button>
-                    </div>
-                    <!--end Two project row-->
                 </div>
-            </div>
-        </div><!-- End #Contact -->
-
+            </section>
+        </div>
     </div>
 
-    <!-- <footer>
-        <span class="border-shape"></span>
-        <div class="text-center footer-social-icons">
-            <div class="row justify-content-center">
-                <ul class="wrapper centered">
-                    <li class="icon twitter">
-                        <span class="tooltip">Twitter</span>
-                        <a target="_blank" href="https://twitter.com/1_N1els_1">
-                            <span><i class="fab fa-twitter"></i></span>
-                        </a>
-                    </li>
-                    <li class="icon github">
-                        <span class="tooltip">Github</span>
-                        <a target="_blank" href="https://github.com/TheRialNiels">
-                            <span><i class="fab fa-github"></i></span>
-                        </a>
-                    </li>
-                    <li class="icon youtube">
-                        <span class="tooltip">Youtube</span>
-                        <a target="_blank" href="https://www.youtube.com/channel/UC_mQoZdss7zErXvXklN44uA/featured">
-                            <span><i class="fab fa-youtube"></i></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="text-center footer-social-icons">
-            <ul class="centered">
-                <a href="#">
-                    <li>Inicio</li>
-                </a>
-                <a href="#about">
-                    <li>Acerca de Mi</li>
-                </a>
-                <a href="#portfolio">
-                    <li>Portafolio</li>
-                </a>
-                <a href="#contact">
-                    <li>Contacto</li>
-                </a>
-            </ul>
-            </p>
-        </div>
-        <div class="copyright">
-            Copyright © 2022 Jonathan Dominguez Patiño - All rights reserved
-        </div>
-    </footer> -->
     <footer>
-        <span class="border-shape"></span>
-        <div class="bottom_content">
-            <section>
-                <ul class="wrapper centered">
-                    <li class="icon twitter">
-                        <span class="tooltip">Twitter</span>
-                        <a target="_blank" href="https://twitter.com/1_N1els_1">
-                            <span><i class="fab fa-twitter"></i></span>
-                        </a>
-                    </li>
-                    <li class="icon github">
-                        <span class="tooltip">Github</span>
-                        <a target="_blank" href="https://github.com/TheRialNiels">
-                            <span><i class="fab fa-github"></i></span>
-                        </a>
-                    </li>
-                    <li class="icon youtube">
-                        <span class="tooltip">Youtube</span>
-                        <a target="_blank" href="https://www.youtube.com/channel/UC_mQoZdss7zErXvXklN44uA/featured">
-                            <span><i class="fab fa-youtube"></i></span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <section>
-                <a href="#">
-                    Inicio </a>
-                <a href="#about">
-                    Acerca de Mi
-                </a>
-                <a href="#portfolio">
-                    Portafolio
-                </a>
-                <a href="#contact">
-                    Contacto
-                </a>
-            </section>
-        </div>
-        <div class="copyright">
-            Copyright © 2021 websitename - All rights reserved
-        </div>
+        <section class="container">
+            <span class="border-shape"></span>
+            <div class="bottom_content">
+                <section>
+                    <ul class="wrapper centered">
+                        <li class="icon twitter">
+                            <span class="tooltip">Twitter</span>
+                            <a target="_blank" href="https://twitter.com/1_N1els_1">
+                                <span><i class="fab fa-twitter"></i></span>
+                            </a>
+                        </li>
+                        <li class="icon github">
+                            <span class="tooltip">Github</span>
+                            <a target="_blank" href="https://github.com/TheRialNiels">
+                                <span><i class="fab fa-github"></i></span>
+                            </a>
+                        </li>
+                        <li class="icon youtube">
+                            <span class="tooltip">Youtube</span>
+                            <a target="_blank" href="https://www.youtube.com/channel/UC_mQoZdss7zErXvXklN44uA/featured">
+                                <span><i class="fab fa-youtube"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <a href="#">
+                        Inicio </a>
+                    <a href="#about">
+                        Acerca de Mi
+                    </a>
+                    <a href="#portfolio">
+                        Portafolio
+                    </a>
+                    <a href="#contact">
+                        Contacto
+                    </a>
+                </section>
+            </div>
+            <div class="copyright">
+                Copyright © 2022 Jonathan Dominguez Patiño - All rights reserved
+            </div>
+        </section>
     </footer>
 
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
@@ -298,7 +252,6 @@
     <script src="./assets/Bootstrap/bootstrap-sweetalert/sweet-alert.js"></script>
     <script src="./assets/js/jquery.sweet-alert.init.js"></script>
     <script src="./assets/js/app.js"></script>
-    <script src="./assets/js/app2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
     <script>
         AOS.init();
