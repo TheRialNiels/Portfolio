@@ -46,6 +46,12 @@ html {
     padding-left: calc(var(--bs-gutter-x) * 1);
 }
 
+.centered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 img {
     width: 100%;
 }
@@ -72,7 +78,7 @@ body {
     height: 100%;
     font-family: "Comfortaa", Helvetica, Arial, sans-serif;
     /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
 }
 
 h1,
@@ -190,11 +196,17 @@ a:focus {
 @media screen and (min-width: 992px) {
     .about-last {
         padding-top: 0;
+        padding-left: 0%;
     }
 }
 
 .about-last p {
     color: var(--primary-color);
+}
+
+#scrollPortfolio,
+#scrollProjects {
+    cursor: pointer;
 }
 
 /* Portfolio Section */
@@ -250,15 +262,6 @@ a:focus {
 }
 
 #contact h5 {
-    color: var(--text-color);
-}
-
-.footer {
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 30px;
-    background-color: var(--background-color);
     color: var(--text-color);
 }
 
