@@ -22,19 +22,21 @@
     --primary-color: #04BFBF;
     --primary-color-rgb: rgb(4, 191, 191);
     --primary-color-rgba: rgba(4, 191, 191, 1);
+    --primary-color-rgba-0-5: rgba(4, 191, 191, 0.5);
     --primary-color-rgba-0-6: rgba(4, 191, 191, 0.6);
 
     --secondary-color: #047DAA;
     --secondary-color-rgb: rgb(4, 125, 170);
     --secondary-color-rgba: rgba(4, 125, 170, 1);
+    --secondary-color-rgba-0-5: rgba(4, 125, 170, 0.5);
     --secondary-color-rgba-0-6: rgba(4, 125, 170, 0.6);
     --secondary-color-rgba-0-25: rgba(4, 125, 170, 0.25);
 
     --background-color: #075180;
     --background-color-rgb: rgb(7, 81, 128);
     --background-color-rgba: rgba(7, 81, 128, 1);
-    --background-color-rgba-0-6: rgba(7, 81, 128, 0.6);
     --background-color-rgba-0-5: rgba(7, 81, 128, 0.5);
+    --background-color-rgba-0-6: rgba(7, 81, 128, 0.6);
 
     --figures-color: white;
     --figures-color-rgba-0-7: rgba(255, 255, 255, 0.7);
@@ -132,6 +134,11 @@ a:focus {
     padding: 0px;
 }
 
+.navbar-secondbg {
+    /* Second */
+    background-color: var(--background-color);
+}
+
 #navbarSupportedContent {
     overflow: hidden;
     position: relative;
@@ -152,7 +159,7 @@ a:focus {
 }
 
 #navbarSupportedContent ul li a {
-    color: var(--background-color-0-5);
+    color: var(--background-color);
     text-decoration: none;
     font-size: 15px;
     display: block;
@@ -162,10 +169,20 @@ a:focus {
     position: relative;
 }
 
-#navbarSupportedContent>ul>li.active>a {
+#navbarSupportedContent>ul>li>a.active {
     color: var(--primary-color);
     background-color: transparent;
     transition: all 0.7s;
+}
+
+#navbarSupportedContent ul li a.background {
+    /* Second */
+    color: var(--primary-color);
+}
+
+#navbarSupportedContent>ul>li>a.background.active {
+    /* Second */
+    color: var(--background-color);
 }
 
 #navbarSupportedContent a:not(:only-child):after {
@@ -209,6 +226,15 @@ a:focus {
     bottom: 10px;
 }
 
+.hori-selector-background {
+    background-color: var(--primary-color);
+}
+
+.hori-selector-background .right,
+.hori-selector-background .left {
+    background-color: var(--primary-color);
+}
+
 .hori-selector .right {
     right: -25px;
 }
@@ -225,6 +251,11 @@ a:focus {
     height: 50px;
     border-radius: 50%;
     background-color: var(--primary-color);
+}
+
+.hori-selector-background .right:before,
+.hori-selector-background .left:before {
+    background-color: var(--background-color);
 }
 
 .hori-selector .right:before {
@@ -336,7 +367,7 @@ a:focus {
 
 .cover.top {
     padding: 15% 0 10% 0;
-    height: 100vh;
+    height: 101vh;
     display: flex;
     background-color: var(--primary-color);
 }

@@ -3,10 +3,10 @@
     ##################  Navbar Section  ##################
     ######################################################
 */
-// ---------Responsive-navbar-active-animation-----------
-function test() {
+//##################  Responsive navbar active animation  ##################
+function NavbarAnimation() {
     var tabsNewAnim = $('#navbarSupportedContent');
-    var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
+    console.log(tabsNewAnim);
     var activeItemNewAnim = tabsNewAnim.find('.active');
     var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
     var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
@@ -18,13 +18,115 @@ function test() {
         "height": activeWidthNewAnimHeight + "px",
         "width": activeWidthNewAnimWidth + "px"
     });
-    $("#navbarSupportedContent").on("click", "li", function (e) {
-        $('#navbarSupportedContent ul li').removeClass("active");
-        $(this).addClass('active');
-        var activeWidthNewAnimHeight = $(this).innerHeight();
-        var activeWidthNewAnimWidth = $(this).innerWidth();
-        var itemPosNewAnimTop = $(this).position();
-        var itemPosNewAnimLeft = $(this).position();
+}
+
+//##################  Navbar/URL Scroll Change  ##################
+const headers = document.querySelectorAll('.page-content .header');
+const navLinks = document.querySelectorAll('#navbarSupportedContent ul li a');
+const observer = new IntersectionObserver((entradas, observador) => {
+    entradas.forEach(entrada => {
+        if (entrada.isIntersecting) {
+            const id = entrada.target.id;
+            const idLink = '#' + id;
+            history.pushState({}, entrada.target.innetText, idLink);
+
+            navLinks.forEach(link => {
+                $('#navbarSupportedContent ul li').removeClass("active");
+
+                const href = link.attributes.href.nodeValue;
+                if (href === idLink) {
+                    document.querySelector('#navbarSupportedContent ul li a[href*=' + id + ']').classList.add('active');
+                    var activeWidthNewAnimHeight = $('#navbarSupportedContent ul li a[href*=' + id + ']').innerHeight();
+                    var activeWidthNewAnimWidth = $('#navbarSupportedContent ul li a[href*=' + id + ']').innerWidth();
+                    var itemPosNewAnimTop = $('#navbarSupportedContent ul li a[href*=' + id + ']').position();
+                    var itemPosNewAnimLeft = $('#navbarSupportedContent ul li a[href*=' + id + ']').position();
+
+                    if (idLink == "#home" || idLink == "#portfolio") {
+                        $('.navbar').addClass('navbar-secondbg');
+                        navLinks.forEach(linkClass => {
+                            linkClass.classList.add('background');
+                        });
+                        $('#horis').addClass('hori-selector-background');
+
+                        $(".hori-selector-background").css({
+                            "top": itemPosNewAnimTop.top + "px",
+                            "left": itemPosNewAnimLeft.left + "px",
+                            "height": activeWidthNewAnimHeight + "px",
+                            "width": activeWidthNewAnimWidth + "px"
+                        });
+                    }
+                    else {
+                        $('.navbar').removeClass('navbar-secondbg');
+                        navLinks.forEach(linkClass => {
+                            linkClass.classList.remove('background');
+                        });
+                        $('#horis').removeClass('hori-selector-background');
+
+                        $(".hori-selector").css({
+                            "top": itemPosNewAnimTop.top + "px",
+                            "left": itemPosNewAnimLeft.left + "px",
+                            "height": activeWidthNewAnimHeight + "px",
+                            "width": activeWidthNewAnimWidth + "px"
+                        });
+                    }
+                }
+            })
+        }
+    });
+}, {
+    threshold: [0, 1],
+    rootMargin: '0px 0px -93% 0px'
+});
+
+headers.forEach(encabezado => {
+    observer.observe(encabezado);
+});
+
+//##################  Navbar Scroll Change  ##################
+/* var sectionPage = document.querySelectorAll('.page-content .header');
+var navLinks = document.querySelectorAll('#navbarSupportedContent ul li a');
+console.log(sectionPage);
+
+window.onscroll = () => {
+    sectionPage.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop;
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
+        var navbar = $('#navbarSupportedContent ul li');
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('#navbarSupportedContent ul li a[href*=' + id + ']').classList.add('active');
+                var activeWidthNewAnimHeight = $('#navbarSupportedContent ul li a[href*=' + id + ']').innerHeight();
+                var activeWidthNewAnimWidth = $('#navbarSupportedContent ul li a[href*=' + id + ']').innerWidth();
+                var itemPosNewAnimTop = $('#navbarSupportedContent ul li a[href*=' + id + ']').position();
+                var itemPosNewAnimLeft = $('#navbarSupportedContent ul li a[href*=' + id + ']').position();
+                $(".hori-selector").css({
+                    "top": itemPosNewAnimTop.top + "px",
+                    "left": itemPosNewAnimLeft.left + "px",
+                    "height": activeWidthNewAnimHeight + "px",
+                    "width": activeWidthNewAnimWidth + "px"
+                });
+            });
+        }
+    });
+}; */
+
+//##################  Check If Navbar Is Clicked And Do An Animation  ##################
+function NavbarClick() {
+    $("#navbarSupportedContent ul li").on("click", "a", function (e) {
+        var btnArray = $(this)[0].className.split(" ");
+        var btnClass = btnArray[0];
+        var navbar = $('#navbarSupportedContent ul li');
+        var navbarObject = $('#navbarSupportedContent ul li a.' + btnClass);
+        navbar.removeClass("active");
+        navbarObject.addClass('active');
+        var activeWidthNewAnimHeight = navbarObject.innerHeight();
+        var activeWidthNewAnimWidth = navbarObject.innerWidth();
+        var itemPosNewAnimTop = navbarObject.position();
+        var itemPosNewAnimLeft = navbarObject.position();
         $(".hori-selector").css({
             "top": itemPosNewAnimTop.top + "px",
             "left": itemPosNewAnimLeft.left + "px",
@@ -33,67 +135,43 @@ function test() {
         });
     });
 }
-$(document).ready(function () {
-    setTimeout(function () { test(); });
-});
-$(window).on('resize', function () {
-    setTimeout(function () { test(); }, 500);
-});
-$(".navbar-toggler").click(function () {
-    $(".navbar-collapse").slideToggle(300);
-    setTimeout(function () { test(); });
-});
 
-// --------------add active class-on another-page move----------
-jQuery(document).ready(function ($) {
-    // Get current path and find target link
-    var path = window.location.pathname.split("/").pop();
+/* $(document).ready(function () {
+    var clickedOption = false;
+    var scrolledOption = false;
 
-    // Account for home page with empty path
-    if (path == '') {
-        path = 'index.html';
-    }
+    $("#navbarSupportedContent").on("click", "li", function (e) {
+        clickedOption = true;
+        alert("Clicked Option Activado");
+    });
 
-    var target = $('#navbarSupportedContent ul li a[href="' + path + '"]');
-    // Add active class to target link
-    target.parent().addClass('active');
-});
-
-// Add active class on another page linked
-// ==========================================
-$(window).on('load', function () {
-    var current = location.pathname;
-    console.log(current);
-    $('#navbarSupportedContent ul li a').each(function () {
-        var $this = $(this);
-        // if the current path is like this link, make it active
-        if ($this.attr('href').indexOf(current) !== -1) {
-            $this.parent().addClass('active');
-            $this.parents('.menu-submenu').addClass('show-dropdown');
-            $this.parents('.menu-submenu').parent().addClass('active');
-        } else {
-            $this.parent().removeClass('active');
+    window.addEventListener('scroll', function (e) {
+        changeActiveClassNavbar(scrolledOption);
+        if (changeActiveClassNavbar(scrolledOption) == true) {
+            scrolledOption = true;
         }
-    })
-});
-
-$(document).ready(function () {
-
-    // Transition effect for navbar and back-to-top icon
-    $(window).scroll(function () {
-        // checks if window is scrolled more than 500px, adds/removes solid class
-        if ($(this).scrollTop() > 550) {
-            $('.navbar').addClass('solid');
-            $('.back-to-top').addClass('visible');
-        } else {
-            $('.navbar').removeClass('solid');
-            $('.back-to-top').removeClass('visible');
-        }
-
     });
 
 
-    // Scrolling effect for Arrow icons
+}); */
+
+$(document).ready(function () {
+    setTimeout(function () { NavbarClick(); });
+});
+$(window).on('resize', function () {
+    setTimeout(function () { NavbarClick(); }, 500);
+});
+$(".navbar-toggler").click(function () {
+    $(".navbar-collapse").slideToggle(300);
+    setTimeout(function () { NavbarClick(); });
+});
+$(window).on('load', function () {
+    setTimeout(function () { NavbarAnimation(); });
+});
+
+//##################  ScrollTo Function  ##################
+$(document).ready(function () {
+    //##################  Scrolling effect for Arrow icons  ##################
     $("#scrollIcon").click(function (e) {
         e.preventDefault();
         $.scrollTo($("#about"), 500);
@@ -118,6 +196,9 @@ $(document).ready(function () {
     ###################  Home Section  ###################
     ######################################################
 */
+
+
+
 /* 
     ######################################################
     ##################  About Section  ###################
@@ -165,6 +246,9 @@ $(function () {
     ################  Portfolio Section  #################
     ######################################################
 */
+
+
+
 /* 
     ######################################################
     #################  Contact Section  ##################
@@ -182,9 +266,7 @@ function EnviarCorreo() {
             type: 'POST',
             dataType: 'json',
             accepts: 'application/json',
-            /* data: { nombre: nombre, email: email, asunto: asunto, mensaje: mensaje }, */
             data: {
-
                 name: nombre,
                 email: email,
                 subject: asunto,

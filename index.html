@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./assets/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/Bootstrap/css/bootstrap-glyphicons.css">
-    <title>Jonathan Dominguez | Software Engineer</title>
+    <title>JDP | Future Software Engineer</title>
     <link rel="stylesheet" href="./assets/Bootstrap/bootstrap-sweetalert/sweet-alert.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,34 +28,35 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
-                    <div class="hori-selector">
+                    <div id="horis" class="hori-selector">
                         <div class="left"></div>
                         <div class="right"></div>
                     </div>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home"><i class="far fa-user"></i></i>Inicio</a>
+                        <a class="btn-home nav-link" href="#home"><i class="far fa-user"></i></i>Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about"><i class="far fa-user"></i></i>Acerca de mi</a>
+                        <a class="btn-about nav-link" href="#about"><i class="far fa-user"></i></i>Acerca de mi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio"><i class="fa fa-briefcase"></i>Portafolio</a>
+                        <a class="btn-portfolio nav-link" href="#portfolio"><i
+                                class="fa fa-briefcase"></i>Portafolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact"><i class="far fa-envelope"></i></i>Contacto</a>
+                        <a class="btn-contact nav-link" href="#contact"><i class="far fa-envelope"></i></i>Contacto</a>
                     </li>
                 </ul>
             </div>
         </section>
     </nav>
 
-    <div class="page-content">
-        <div id="home" class="row cover top">
+    <div class="page-content" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+        <div id="home" class="header row cover top">
             <section class="container">
                 <div class="col-xs-12">
                     <div class="row">
                         <div class="col-xs-12 headline">
-                            <h1 class="text-center">Hola!, Yo soy Jonathan Dominguez</h1>
+                            <h1 class="text-center">Hola! Yo soy Jonathan Dominguez</h1>
                             <p class="lead text-center">Estudiante de Ingenieria en Software.</p>
                         </div>
                     </div>
@@ -68,7 +69,7 @@
             </section>
         </div>
 
-        <div id="about" class="row cover">
+        <div id="about" class="header row cover">
             <section class="container">
                 <h2 class="text-center">Acerca de Mi</h2>
                 <div class="contaniner">
@@ -106,7 +107,7 @@
             </section>
         </div>
 
-        <div id="portfolio" class="row cover">
+        <div id="portfolio" class="header row cover">
             <section class="container">
                 <h2 class="text-center">Portfolio</h2>
                 <div class="container">
@@ -168,7 +169,7 @@
             </section>
         </div>
 
-        <div id="contact" class="row cover">
+        <div id="contact" class="header row cover">
             <section class="container">
                 <h2 class="text-center contact-header">Contacto</h2>
                 <h5 class="text-center">Gracias por dedicar un poco de tu tiempo para escribirme.</h5>
