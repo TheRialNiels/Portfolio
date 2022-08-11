@@ -33,17 +33,20 @@
                         <div class="right"></div>
                     </div>
                     <li class="nav-item">
-                        <a class="btn-home nav-link" href="#home"><i class="far fa-user"></i></i>Inicio</a>
+                        <a id="btn-home" class="btn-home nav-link active" href="#home"><i
+                                class="far fa-user"></i></i>Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn-about nav-link" href="#about"><i class="far fa-user"></i></i>Acerca de mi</a>
+                        <a id="btn-about" class="btn-about nav-link" href="#about"><i class="far fa-user"></i></i>Acerca
+                            de mi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn-portfolio nav-link" href="#portfolio"><i
+                        <a id="btn-portfolio" class="btn-portfolio nav-link" href="#portfolio"><i
                                 class="fa fa-briefcase"></i>Portafolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn-contact nav-link" href="#contact"><i class="far fa-envelope"></i></i>Contacto</a>
+                        <a id="btn-contact" class="btn-contact nav-link" href="#contact"><i
+                                class="far fa-envelope"></i></i>Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -77,12 +80,20 @@
                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center about-info">
                             <img class="img-circle text-center profile-img" src="./assets/images/avatars/avatar6.png">
                             <p class="text-center">
-                                Estudiante de Ingeniería en Software, responsable, comprometido con el trabajo,
-                                capaz de trabajar bajo estrés y dispuesto a aprender nuevas tecnologías.
+                                Futuro Ingeniero en Software comprometido con el trabajo.
                             </p>
                             <p class="text-center">
-                                Disfruto el codificar nuevas cosas, con el objetivo de desarrollar apps
-                                y así mejorar como desarrollador día con día.
+                                Cuenta conmigo para desarrollar tus proyectos, puesto que
+                                soy responsable, siempre buscando que todo se
+                                realice eficazmente y cuento con buenas habilidades de
+                                colaboración dentro de un equipo.
+                            </p>
+                            <p class="text-center">
+                                Disfruto codificar cosas nuevas, para mejorar como programador día con día.
+                            </p>
+                            <p class="text-center">
+                                Con el objetivo de adquirir un gran conocimiento y experiencia en el campo
+                                de desarrollador de software, más específicamente con los lenguajes de Java y Python.
                             </p>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 about-tools">
@@ -101,6 +112,41 @@
                                     <span id="scrollProjects" class="glyphicon glyphicon-arrow-down"></span>
                                 </p>
                             </div>
+                        </div>
+                        <div class="col-12">
+                            <p class="skills-text text-center">Skills</p>
+                            <section class="container customer-logos slider">
+                                <div class="slide">
+                                    <img src="./assets/images/skills/c++-logo.png">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/images/skills/java-logo.png">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/images/skills/python-logo.png">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/images/skills/csharp-logo.png">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/images/skills/mysql-logo.png">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/images/skills/php-logo.png">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/images/skills/codeigniter-logo.png">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/images/skills/css-logo.png">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/images/skills/html-logo.png">
+                                </div>
+                                <div class="slide">
+                                    <img src="./assets/images/skills/bootstrap-logo.png">
+                                </div>
+                            </section>
                         </div>
                     </div>
                 </div>
@@ -179,7 +225,8 @@
                             <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-email">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email"
+                                onblur="CheckEmail();">
                         </div>
                         <div class="mb-3 input-group-lg c-subject">
                             <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto">
@@ -189,7 +236,7 @@
                                 placeholder="Mensaje"></textarea>
                         </div>
                         <div class="row btn-enviar">
-                            <button onClick="EnviarCorreo();" id="btn-enviar-correo" type="submit"
+                            <button onClick="SendEmail();" id="btn-enviar-correo" type="submit"
                                 class="btn btn-3 hover-border-1">
                                 <span>Enviar</span>
                             </button>
@@ -252,27 +299,12 @@
     <script src="https://cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script>
     <script src="./assets/Bootstrap/bootstrap-sweetalert/sweet-alert.js"></script>
     <script src="./assets/js/jquery.sweet-alert.init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="./assets/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
     <script>
+        //Script para las animaciones al bajar scroll
         AOS.init();
-    </script>
-    <script>
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    </script>
-    <script>
-        $(document).ready(function () {
-            $('.modal').each(function () {
-                $this = $(this);
-                $this.on('hidden.bs.modal', function () {
-                    $("iframe").each(function () {
-                        var src = $(this).attr('src');
-                        $(this).attr('src', src);
-                    });
-                })
-            });
-        }); 
     </script>
 </body>
 

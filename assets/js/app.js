@@ -6,7 +6,6 @@
 //##################  Responsive navbar active animation  ##################
 function NavbarAnimation() {
     var tabsNewAnim = $('#navbarSupportedContent');
-    console.log(tabsNewAnim);
     var activeItemNewAnim = tabsNewAnim.find('.active');
     var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
     var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
@@ -21,7 +20,7 @@ function NavbarAnimation() {
 }
 
 //##################  Navbar/URL Scroll Change  ##################
-const headers = document.querySelectorAll('.page-content .header');
+/* const headers = document.querySelectorAll('.page-content .header');
 const navLinks = document.querySelectorAll('#navbarSupportedContent ul li a');
 const observer = new IntersectionObserver((entradas, observador) => {
     entradas.forEach(entrada => {
@@ -75,44 +74,76 @@ const observer = new IntersectionObserver((entradas, observador) => {
     });
 }, {
     threshold: [0, 1],
-    rootMargin: '0px 0px -93% 0px'
+    rootMargin: '0px 0px -100% 0px'
 });
 
 headers.forEach(encabezado => {
     observer.observe(encabezado);
-});
+}); */
 
-//##################  Navbar Scroll Change  ##################
-/* var sectionPage = document.querySelectorAll('.page-content .header');
-var navLinks = document.querySelectorAll('#navbarSupportedContent ul li a');
-console.log(sectionPage);
+//##################  Navbar/Url Scroll Change 2  ##################
+function NavbarScroll() {
+    var sectionPage = document.querySelectorAll('.page-content .header');
+    var navLinks = document.querySelectorAll('#navbarSupportedContent ul li a');
+    const url = document.location.origin + document.location.pathname;
+    window.onscroll = () => {
+        sectionPage.forEach(section => {
+            //Distancia Recorrida
+            let top = window.scrollY;
+            //Distancia a la que se encuentra la seccion
+            let offset = section.offsetTop;
+            //Altura total de la seccion
+            let height = section.offsetHeight;
+            //Informacion de todas las
+            let id = section.getAttribute('id');
+            //Informacion del navbar
+            var navbar = document.querySelector('.navbar');
+            var navbarHeight = navbar.offsetHeight;
+            /* console.log('Distancia recorrida: ' + top + '\nSeccion: ' + id + ' offset: ' + offset + ' height: ' + height); */
 
-window.onscroll = () => {
-    sectionPage.forEach(section => {
-        let top = window.scrollY;
-        let offset = section.offsetTop;
-        let height = section.offsetHeight;
-        let id = section.getAttribute('id');
-        var navbar = $('#navbarSupportedContent ul li');
+            if (top + navbarHeight >= offset && top < offset + height) {
+                const idLink = '#' + id;
 
-        if (top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('#navbarSupportedContent ul li a[href*=' + id + ']').classList.add('active');
-                var activeWidthNewAnimHeight = $('#navbarSupportedContent ul li a[href*=' + id + ']').innerHeight();
-                var activeWidthNewAnimWidth = $('#navbarSupportedContent ul li a[href*=' + id + ']').innerWidth();
-                var itemPosNewAnimTop = $('#navbarSupportedContent ul li a[href*=' + id + ']').position();
-                var itemPosNewAnimLeft = $('#navbarSupportedContent ul li a[href*=' + id + ']').position();
-                $(".hori-selector").css({
-                    "top": itemPosNewAnimTop.top + "px",
-                    "left": itemPosNewAnimLeft.left + "px",
-                    "height": activeWidthNewAnimHeight + "px",
-                    "width": activeWidthNewAnimWidth + "px"
+                navLinks.forEach(links => {
+                    links.classList.remove('active');
+                    document.querySelector('#navbarSupportedContent ul li a[href*=' + id + ']').classList.add('active');
+                    var activeWidthNewAnimHeight = $('#navbarSupportedContent ul li a[href*=' + id + ']').innerHeight();
+                    var activeWidthNewAnimWidth = $('#navbarSupportedContent ul li a[href*=' + id + ']').innerWidth();
+                    var itemPosNewAnimTop = $('#navbarSupportedContent ul li a[href*=' + id + ']').position();
+                    var itemPosNewAnimLeft = $('#navbarSupportedContent ul li a[href*=' + id + ']').position();
+                    if (idLink == "#home" || idLink == "#portfolio") {
+                        $('.navbar').addClass('navbar-secondbg');
+                        navLinks.forEach(linkClass => {
+                            linkClass.classList.add('background');
+                        });
+                        $('#horis').addClass('hori-selector-background');
+
+                        $(".hori-selector-background").css({
+                            "top": itemPosNewAnimTop.top + "px",
+                            "left": itemPosNewAnimLeft.left + "px",
+                            "height": activeWidthNewAnimHeight + "px",
+                            "width": activeWidthNewAnimWidth + "px"
+                        });
+                    }
+                    else {
+                        $('.navbar').removeClass('navbar-secondbg');
+                        navLinks.forEach(linkClass => {
+                            linkClass.classList.remove('background');
+                        });
+                        $('#horis').removeClass('hori-selector-background');
+
+                        $(".hori-selector").css({
+                            "top": itemPosNewAnimTop.top + "px",
+                            "left": itemPosNewAnimLeft.left + "px",
+                            "height": activeWidthNewAnimHeight + "px",
+                            "width": activeWidthNewAnimWidth + "px"
+                        });
+                    }
                 });
-            });
-        }
-    });
-}; */
+            }
+        });
+    }
+}
 
 //##################  Check If Navbar Is Clicked And Do An Animation  ##################
 function NavbarClick() {
@@ -121,18 +152,8 @@ function NavbarClick() {
         var btnClass = btnArray[0];
         var navbar = $('#navbarSupportedContent ul li');
         var navbarObject = $('#navbarSupportedContent ul li a.' + btnClass);
-        navbar.removeClass("active");
+        /* navbar.removeClass("active"); */
         navbarObject.addClass('active');
-        var activeWidthNewAnimHeight = navbarObject.innerHeight();
-        var activeWidthNewAnimWidth = navbarObject.innerWidth();
-        var itemPosNewAnimTop = navbarObject.position();
-        var itemPosNewAnimLeft = navbarObject.position();
-        $(".hori-selector").css({
-            "top": itemPosNewAnimTop.top + "px",
-            "left": itemPosNewAnimLeft.left + "px",
-            "height": activeWidthNewAnimHeight + "px",
-            "width": activeWidthNewAnimWidth + "px"
-        });
     });
 }
 
@@ -156,14 +177,15 @@ function NavbarClick() {
 }); */
 
 $(document).ready(function () {
-    setTimeout(function () { NavbarClick(); });
+    /* setTimeout(function () { NavbarClick(); }); */
+    setTimeout(function () { NavbarScroll(); });
 });
 $(window).on('resize', function () {
-    setTimeout(function () { NavbarClick(); }, 500);
+    setTimeout(function () { NavbarScroll(); }, 500);
 });
 $(".navbar-toggler").click(function () {
     $(".navbar-collapse").slideToggle(300);
-    setTimeout(function () { NavbarClick(); });
+    setTimeout(function () { NavbarScroll(); });
 });
 $(window).on('load', function () {
     setTimeout(function () { NavbarAnimation(); });
@@ -196,8 +218,9 @@ $(document).ready(function () {
     ###################  Home Section  ###################
     ######################################################
 */
-
-
+//Habilitar los tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 /* 
     ######################################################
@@ -241,20 +264,53 @@ $(function () {
     });
 });
 
+$(document).ready(function () {
+    $('.customer-logos').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: true,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+
 /* 
     ######################################################
     ################  Portfolio Section  #################
     ######################################################
 */
-
-
+//Pausar video al cerrar modal
+$(document).ready(function () {
+    $('.modal').each(function () {
+        $this = $(this);
+        $this.on('hidden.bs.modal', function () {
+            $("iframe").each(function () {
+                var src = $(this).attr('src');
+                $(this).attr('src', src);
+            });
+        })
+    });
+});
 
 /* 
     ######################################################
     #################  Contact Section  ##################
     ######################################################
 */
-function EnviarCorreo() {
+function SendEmail() {
     var nombre = $('#name').val();
     var email = $('#email').val();
     var asunto = $('#subject').val();
@@ -303,5 +359,12 @@ function EnviarCorreo() {
         });
     } else {
         swal("Cuidado", "Aun existen campos vacios", "warning");
+    }
+}
+
+function CheckEmail() {
+    if ($('#email').val().indexOf('@', 0) == -1 || $('#email').val().indexOf('.', 0) == -1) {
+        swal("Alerta", 'El correo electrónico introducido no es correcto.', "warning");
+        $('#email').val("");
     }
 }
