@@ -390,7 +390,7 @@ a:focus {
     font-family: "Quattrocento", sans-serif;
     font-size: 24px;
     font-weight: 700;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 #about h1 {
@@ -410,12 +410,12 @@ a:focus {
 .about,
 .about-info,
 .about-tools {
-    padding: 4% 10% 1% 10%;
+    padding: 4% 10% 0% 10%;
     font-size: 1.25em;
 }
 
 .about-last {
-    padding: 4% 00% 1% 10%;
+    padding: 5% 4% 0% 5%;
     font-size: 1.25em;
 }
 
@@ -441,6 +441,7 @@ a:focus {
     width: 100%;
     height: auto;
     padding: 20px;
+    text-align: center;
 
     /*centers it in the .banner*/
     position: absolute;
@@ -521,25 +522,6 @@ a:focus {
     }
 }
 
-@media screen and (min-width: 992px) {
-    .about-tools {
-        padding-top: 5.625em;
-    }
-}
-
-.about-last {
-    padding-top: 3.125em;
-    padding-bottom: 0;
-    font-size: 1.2em;
-}
-
-@media screen and (min-width: 992px) {
-    .about-last {
-        padding-top: 0;
-        padding-left: 0%;
-    }
-}
-
 .about-last p {
     color: var(--primary-color);
 }
@@ -551,7 +533,8 @@ a:focus {
 
 /* 
     ##################  Carousel Images  ##################
- */
+*/
+
 .slick-slide {
     margin: 0px 20px;
 }

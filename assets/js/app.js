@@ -5,13 +5,14 @@
 */
 //##################  Responsive navbar active animation  ##################
 function NavbarAnimation() {
-    var tabsNewAnim = $('#navbarSupportedContent');
-    var activeItemNewAnim = tabsNewAnim.find('.active');
-    var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
-    var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
-    var itemPosNewAnimTop = activeItemNewAnim.position();
-    var itemPosNewAnimLeft = activeItemNewAnim.position();
-    $(".hori-selector").css({
+    var activeWidthNewAnimHeight = $('#navbarSupportedContent ul li a.btn-home').innerHeight();
+    var activeWidthNewAnimWidth = $('#navbarSupportedContent ul li a.btn-home').innerWidth();
+    var itemPosNewAnimTop = $('#navbarSupportedContent ul li a.btn-home').position();
+    var itemPosNewAnimLeft = $('#navbarSupportedContent ul li a.btn-home').position();
+    $('.navbar').addClass('navbar-secondbg');
+    $('#navbarSupportedContent ul li a.btn-home').addClass('background');
+    $('#horis').addClass('hori-selector-background');
+    $(".hori-selector-background").css({
         "top": itemPosNewAnimTop.top + "px",
         "left": itemPosNewAnimLeft.left + "px",
         "height": activeWidthNewAnimHeight + "px",
@@ -81,7 +82,7 @@ headers.forEach(encabezado => {
     observer.observe(encabezado);
 }); */
 
-//##################  Navbar/Url Scroll Change 2  ##################
+//##################  Navbar Scroll Change  ##################
 function NavbarScroll() {
     var sectionPage = document.querySelectorAll('.page-content .header');
     var navLinks = document.querySelectorAll('#navbarSupportedContent ul li a');
@@ -99,11 +100,10 @@ function NavbarScroll() {
             //Informacion del navbar
             var navbar = document.querySelector('.navbar');
             var navbarHeight = navbar.offsetHeight;
-            /* console.log('Distancia recorrida: ' + top + '\nSeccion: ' + id + ' offset: ' + offset + ' height: ' + height); */
+            console.log('Distancia recorrida: ' + top + '\nSeccion: ' + id + ' offset: ' + offset + ' height: ' + height);
 
             if (top + navbarHeight >= offset && top < offset + height) {
                 const idLink = '#' + id;
-
                 navLinks.forEach(links => {
                     links.classList.remove('active');
                     document.querySelector('#navbarSupportedContent ul li a[href*=' + id + ']').classList.add('active');
@@ -145,39 +145,7 @@ function NavbarScroll() {
     }
 }
 
-//##################  Check If Navbar Is Clicked And Do An Animation  ##################
-function NavbarClick() {
-    $("#navbarSupportedContent ul li").on("click", "a", function (e) {
-        var btnArray = $(this)[0].className.split(" ");
-        var btnClass = btnArray[0];
-        var navbar = $('#navbarSupportedContent ul li');
-        var navbarObject = $('#navbarSupportedContent ul li a.' + btnClass);
-        /* navbar.removeClass("active"); */
-        navbarObject.addClass('active');
-    });
-}
-
-/* $(document).ready(function () {
-    var clickedOption = false;
-    var scrolledOption = false;
-
-    $("#navbarSupportedContent").on("click", "li", function (e) {
-        clickedOption = true;
-        alert("Clicked Option Activado");
-    });
-
-    window.addEventListener('scroll', function (e) {
-        changeActiveClassNavbar(scrolledOption);
-        if (changeActiveClassNavbar(scrolledOption) == true) {
-            scrolledOption = true;
-        }
-    });
-
-
-}); */
-
 $(document).ready(function () {
-    /* setTimeout(function () { NavbarClick(); }); */
     setTimeout(function () { NavbarScroll(); });
 });
 $(window).on('resize', function () {
@@ -193,7 +161,7 @@ $(window).on('load', function () {
 
 //##################  ScrollTo Function  ##################
 $(document).ready(function () {
-    //##################  Scrolling effect for Arrow icons  ##################
+    //##################  Scrolling effect for icons/text  ##################
     $("#scrollIcon").click(function (e) {
         e.preventDefault();
         $.scrollTo($("#about"), 500);
@@ -218,7 +186,7 @@ $(document).ready(function () {
     ###################  Home Section  ###################
     ######################################################
 */
-//Habilitar los tooltips
+//##################  Habilitar Tooltips  ##################
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
@@ -227,10 +195,16 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
     ##################  About Section  ###################
     ######################################################
 */
-/* Writing */
+//##################  Script para las animaciones al bajar scroll  ##################
+AOS.init({
+    offset: 300,
+    duration: 3000
+});
+
+//##################  Animacion de Escribir  ##################
 $(function () {
     $(".typed").typed({
-        strings: ["Jugar Video Juegos.", "El Ajedrez.", "El Trading.", "Programar."],
+        strings: ["El Ajedrez.", "El Trading.", "Jugar Video Juegos.", "Programar."],
         // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
         stringsElement: null,
         // typing speed
@@ -292,7 +266,7 @@ $(document).ready(function () {
     ################  Portfolio Section  #################
     ######################################################
 */
-//Pausar video al cerrar modal
+//##################  Pausar video al cerrar el modal  ##################
 $(document).ready(function () {
     $('.modal').each(function () {
         $this = $(this);

@@ -53,7 +53,7 @@
         </section>
     </nav>
 
-    <div class="page-content" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <div class="page-content">
         <div id="home" class="header row cover top">
             <section class="container">
                 <div class="col-xs-12">
@@ -77,7 +77,7 @@
                 <h2 class="text-center">Acerca de Mi</h2>
                 <div class="contaniner">
                     <div class="row">
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center about-info">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center about-info" data-aos="fade-right">
                             <img class="img-circle text-center profile-img" src="./assets/images/avatars/avatar6.png">
                             <p class="text-center">
                                 Futuro Ingeniero en Software comprometido con el trabajo.
@@ -96,7 +96,8 @@
                                 de desarrollador de software, más específicamente con los lenguajes de Java y Python.
                             </p>
                         </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 about-tools">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 about-tools" data-aos="fade-left"
+                            data-aos-offset="350">
                             <div id="page_wrap">
                                 <p class="text-center">Hobbies</p>
                                 <div class="banner">
@@ -106,14 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row break justify-content-center">
-                            <div class="col-12 about-last">
-                                <p id="scrollPortfolio" class="text-center">Dale un vistazo a mis proyectos recientes
-                                    <span id="scrollProjects" class="glyphicon glyphicon-arrow-down"></span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-12">
+                        <div class="skills-images col-12" data-aos="fade-up">
                             <p class="skills-text text-center">Skills</p>
                             <section class="container customer-logos slider">
                                 <div class="slide">
@@ -148,6 +142,13 @@
                                 </div>
                             </section>
                         </div>
+                        <div class="row break justify-content-center" data-aos="fade-up">
+                            <div class="col-12 about-last">
+                                <p id="scrollPortfolio" class="text-center">Dale un vistazo a mis proyectos recientes
+                                    <span id="scrollProjects" class="glyphicon glyphicon-arrow-down"></span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -158,7 +159,7 @@
                 <h2 class="text-center">Portfolio</h2>
                 <div class="container">
                     <div class="row portfolio-projects">
-                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4" data-aos="fade-left" data-aos-offset="350">
                             <div class="img-container">
                                 <figure>
                                     <img src="./assets/images/Proy1.png" class="img-fluid" alt="...">
@@ -302,10 +303,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="./assets/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
-    <script>
-        //Script para las animaciones al bajar scroll
-        AOS.init();
-    </script>
 </body>
 
 <!-- Modal -->
