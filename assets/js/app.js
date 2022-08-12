@@ -198,7 +198,7 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 //##################  Script para las animaciones al bajar scroll  ##################
 AOS.init({
     offset: 300,
-    duration: 3000
+    duration: 1500
 });
 
 //##################  Animacion de Escribir  ##################
