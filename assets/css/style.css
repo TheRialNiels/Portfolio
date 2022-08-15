@@ -64,13 +64,13 @@
 html {
     position: relative;
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
     background: var(--background-color);
     width: 100%;
     min-height: 100vh;
-    overflow-x: hidden;
     font-family: "Comfortaa", Helvetica, Arial, sans-serif;
 }
 
@@ -1088,6 +1088,11 @@ button.btn.hover-border-1:hover::after {
 
 #contact h5 {
     color: var(--text-color);
+}
+
+.briefcase {
+    width: 15px;
+    height: 15px;
 }
 
 .form-container {

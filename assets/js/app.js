@@ -5,10 +5,10 @@
 */
 //##################  Responsive navbar active animation  ##################
 function NavbarAnimation() {
-    var activeWidthNewAnimHeight = $('#navbarSupportedContent ul li a.btn-home').innerHeight();
-    var activeWidthNewAnimWidth = $('#navbarSupportedContent ul li a.btn-home').innerWidth();
-    var itemPosNewAnimTop = $('#navbarSupportedContent ul li a.btn-home').position();
-    var itemPosNewAnimLeft = $('#navbarSupportedContent ul li a.btn-home').position();
+    let activeWidthNewAnimHeight = $('#navbarSupportedContent ul li a.btn-home').innerHeight();
+    let activeWidthNewAnimWidth = $('#navbarSupportedContent ul li a.btn-home').innerWidth();
+    let itemPosNewAnimTop = $('#navbarSupportedContent ul li a.btn-home').position();
+    let itemPosNewAnimLeft = $('#navbarSupportedContent ul li a.btn-home').position();
     $('.navbar').addClass('navbar-secondbg');
     $('#navbarSupportedContent ul li a.btn-home').addClass('background');
     $('#horis').addClass('hori-selector-background');
@@ -84,9 +84,9 @@ headers.forEach(encabezado => {
 
 //##################  Navbar Scroll Change  ##################
 function NavbarScroll() {
-    var sectionPage = document.querySelectorAll('.page-content .header');
-    var navLinks = document.querySelectorAll('#navbarSupportedContent ul li a');
-    const url = document.location.origin + document.location.pathname;
+    let sectionPage = document.querySelectorAll('.page-content .header');
+    let navLinks = document.querySelectorAll('#navbarSupportedContent ul li a');
+    /* const url = document.location.origin + document.location.pathname; */
     window.onscroll = () => {
         sectionPage.forEach(section => {
             //Distancia Recorrida
@@ -98,20 +98,20 @@ function NavbarScroll() {
             //Informacion de todas las
             let id = section.getAttribute('id');
             //Informacion del navbar
-            var navbar = document.querySelector('.navbar');
-            var navbarHeight = navbar.offsetHeight;
-            console.log('Distancia recorrida: ' + top + '\nSeccion: ' + id + ' offset: ' + offset + ' height: ' + height);
+            let navbar = document.querySelector('.navbar');
+            let navbarHeight = navbar.offsetHeight;
+            /* console.log('Distancia recorrida: ' + top + '\nSeccion: ' + id + ' offset: ' + offset + ' height: ' + height); */
 
             if (top + navbarHeight >= offset && top < offset + height) {
                 const idLink = '#' + id;
                 navLinks.forEach(links => {
                     links.classList.remove('active');
                     document.querySelector('#navbarSupportedContent ul li a[href*=' + id + ']').classList.add('active');
-                    var activeWidthNewAnimHeight = $('#navbarSupportedContent ul li a[href*=' + id + ']').innerHeight();
-                    var activeWidthNewAnimWidth = $('#navbarSupportedContent ul li a[href*=' + id + ']').innerWidth();
-                    var itemPosNewAnimTop = $('#navbarSupportedContent ul li a[href*=' + id + ']').position();
-                    var itemPosNewAnimLeft = $('#navbarSupportedContent ul li a[href*=' + id + ']').position();
-                    if (idLink == "#home" || idLink == "#portfolio") {
+                    let activeWidthNewAnimHeight = $('#navbarSupportedContent ul li a[href*=' + id + ']').innerHeight();
+                    let activeWidthNewAnimWidth = $('#navbarSupportedContent ul li a[href*=' + id + ']').innerWidth();
+                    let itemPosNewAnimTop = $('#navbarSupportedContent ul li a[href*=' + id + ']').position();
+                    let itemPosNewAnimLeft = $('#navbarSupportedContent ul li a[href*=' + id + ']').position();
+                    if (idLink === "#home" || idLink === "#portfolio") {
                         $('.navbar').addClass('navbar-secondbg');
                         navLinks.forEach(linkClass => {
                             linkClass.classList.add('background');
@@ -272,7 +272,7 @@ $(document).ready(function () {
         $this = $(this);
         $this.on('hidden.bs.modal', function () {
             $("iframe").each(function () {
-                var src = $(this).attr('src');
+                let src = $(this).attr('src');
                 $(this).attr('src', src);
             });
         })
@@ -285,13 +285,61 @@ $(document).ready(function () {
     ######################################################
 */
 function SendEmail() {
-    var nombre = $('#name').val();
-    var email = $('#email').val();
-    var asunto = $('#subject').val();
-    var mensaje = $('#message').val();
+    let nombre = $('#name').val();
+    let email = $('#email').val();
+    let asunto = $('#subject').val();
+    let mensaje = $('#message').val();
 
-    if (nombre != "" && email != "" && asunto != "" && mensaje != "") {
-        $.ajax({
+    if (nombre.trim() !== "" && email.trim() !== "" && asunto.trim() !== "" && mensaje.trim() !== "") {
+        fetch('https://formsubmit.co/ajax/41aa9415c1a6a44e10be761b5f78a569', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: nombre,
+                email: email,
+                subject: asunto,
+                message: mensaje
+            })
+        })
+            .then(response => response.json())
+            .then(function (data) {
+                console.log(data);
+                if (data.success == "true") {
+                    swal({
+                        title: "Exito",
+                        text: "Se ha enviado el correo con exito",
+                        type: "success",
+                        showCancelButton: false,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "OK",
+                        closeOnConfirm: true,
+                        closeOnCancel: false
+                    }, function (isConfirm) {
+                        location.href = "";
+                    });
+                }
+            })
+            .catch(function (error) {
+                $('#name').val("");
+                $('#email').val("");
+                $('#subject').val("");
+                $('#message').val("");
+
+                swal({
+                    title: "Error",
+                    text: error,
+                    type: "error",
+                    showCancelButton: false,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "Cerrar",
+                    closeOnConfirm: true,
+                    closeOnCancel: false
+                });
+            })
+        /* $.ajax({
             url: 'https://formsubmit.co/ajax/41aa9415c1a6a44e10be761b5f78a569',
             type: 'POST',
             dataType: 'json',
@@ -330,15 +378,86 @@ function SendEmail() {
                     });
                 }
             }
-        });
+        }); */
     } else {
         swal("Cuidado", "Aun existen campos vacios", "warning");
     }
 }
 
+function CheckName() {
+    let nameRegex = /^[a-zA-ZÀ-ÿ\s]{1,60}$/;
+    let name = $('#name').val();
+
+    if (name === "") {
+
+    }
+    else if (name.trim() === "") {
+        swal("Alerta", "Los espacios en blanco no son permitidos.", "warning")
+        $('#name').val("");
+    }
+    else if (name.length > 60 || name.length < 4) {
+        swal("Alerta", "El nombre tiene que contener de 4 a 60 caracteres.", "warning")
+        $('#name').val("");
+    }
+    else if (nameRegex.test(name) == false) {
+        swal("Alerta", 'El nombre solo puede contener letras.', "warning");
+        $('#name').val("");
+    }
+}
+
 function CheckEmail() {
-    if ($('#email').val().indexOf('@', 0) == -1 || $('#email').val().indexOf('.', 0) == -1) {
+    let emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    let email = $('#email').val();
+
+    if (email === "") {
+
+    }
+    else if (email.trim() === "") {
+        swal("Alerta", "Los espacios en blanco no son permitidos.", "warning")
+        $('#email').val("");
+    }
+    else if (emailRegex.test(email) == false) {
         swal("Alerta", 'El correo electrónico introducido no es correcto.', "warning");
         $('#email').val("");
+    }
+    else if (email.length > 60 || email.length < 4) {
+        swal("Alerta", "El email tiene que contener como máximo 60 caracteres.", "warning")
+    }
+}
+
+function CheckSubject() {
+    let subjectRegex = /^[a-zA-ZÀ-ÿ\s]{1,60}$/;
+    let subject = $('#subject').val();
+
+    if (subject === "") {
+
+    }
+    else if (subject.trim() === "") {
+        swal("Alerta", "Los espacios en blanco no son permitidos.", "warning")
+        $('#subject').val("");
+    }
+    else if (subject.length > 60 || subject.length < 4) {
+        swal("Alerta", "El asunto tiene que contener de 4 a 60 caracteres.", "warning")
+        $('#subject').val("");
+    }
+    else if (subjectRegex.test(subject) == false) {
+        swal("Alerta", 'El asunto solo puede contener letras.', "warning");
+        $('#subject').val("");
+    }
+}
+
+function CheckMessage() {
+    let message = $('#message').val();
+
+    if (message === "") {
+
+    }
+    else if (message.trim() === "") {
+        swal("Alerta", "Los espacios en blanco no son permitidos.", "warning")
+        $('#message').val("");
+    }
+    else if (message.length > 400 || message.length < 4) {
+        swal("Alerta", "El mensaje tiene que contener de 4 a 400 caracteres.", "warning")
+        $('#message').val("");
     }
 }

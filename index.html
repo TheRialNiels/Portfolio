@@ -42,7 +42,7 @@
                     </li>
                     <li class="nav-item">
                         <a id="btn-portfolio" class="btn-portfolio nav-link" href="#portfolio"><i
-                                class="fa fa-briefcase"></i>Portafolio</a>
+                                class="briefcase">ﴒ</i>Portafolio</a>
                     </li>
                     <li class="nav-item">
                         <a id="btn-contact" class="btn-contact nav-link" href="#contact"><i
@@ -223,18 +223,20 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-name">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nombre"
+                                onblur="CheckName();">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3 input-group-lg c-email">
                             <input type="email" class="form-control" id="email" name="email" placeholder="Email"
                                 onblur="CheckEmail();">
                         </div>
                         <div class="mb-3 input-group-lg c-subject">
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Asunto"
+                                onblur="CheckSubject();">
                         </div>
                         <div class="mb-3 input-group-lg c-message">
-                            <textarea class="form-control" id="message" rows="8" name="message"
-                                placeholder="Mensaje"></textarea>
+                            <textarea class="form-control" id="message" rows="8" name="message" placeholder="Mensaje"
+                                onblur="CheckMessage();"></textarea>
                         </div>
                         <div class="row btn-enviar">
                             <button onClick="SendEmail();" id="btn-enviar-correo" type="submit"
@@ -294,6 +296,202 @@
         </section>
     </footer>
 
+    <!-- Modal -->
+    <div class="modal fade" id="modal-proyect-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Fenec Karting Game</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-12 description">
+                            <h3>Resumen del Proyecto</h3>
+                            <h5>
+                                El video juego fue desarrollado utilizando el motor gráfico de Unity, haciendo uso de
+                                una
+                                plantilla ya definida, que venía incluido todos los diseños de las pistas, coches,
+                                paisajes,
+                                etc.
+                            </h5>
+                            <h5>
+                                Se utilizó C Sharp para la creación de los scripts necesarios para el videojuego. Para
+                                realizar las funciones de recogida de objetos, desaparecerlos, etc.
+                            </h5>
+                        </div>
+                        <div class="col-12 video-text">
+                            <h3>Video</h3>
+                        </div>
+                        <div class="col-12 ratio ratio-16x9 video">
+                            <iframe src="https://www.youtube.com/embed/RzSPfFB0go4" title="YouTube" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/TheRialNiels/Fenec-Karting-Game" target="_blank"
+                        class="btn btn-3 hover-border-1" id="btn-github">
+                        <span>Ir a Github</span>
+                    </a>
+                    <button type="button" class="btn btn-3 hover-border-1" id="btn-close" data-bs-dismiss="modal">
+                        <span>Cerrar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-proyect-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Fenec 3D Platform Game</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-12 description">
+                            <h3>Resumen del Proyecto</h3>
+                            <h5>
+                                El video juego fue desarrollado utilizando el motor gráfico de Unity,
+                                se hizo casi todo desde cero, unicamente se obtuvieron las skins de los jugadores y del
+                                ambiente de una plantilla ya hecha.
+                            </h5>
+                            <h5>
+                                Todos los scripts se hicieron utilizando C sharp, para
+                                permitir la movilidad dentro del juego, así como dar las funcionalidades de matar
+                                enemigos,
+                                que los enemigos disparen objetos, etc.
+                            </h5>
+                        </div>
+                        <div class="col-12 video-text">
+                            <h3>Video</h3>
+                        </div>
+                        <div class="col-12 ratio ratio-16x9 video">
+                            <iframe src="https://www.youtube.com/embed/VJ0nu7Xi5TY" title="YouTube" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/TheRialNiels/Fenec-3D-Platform-Game" target="_blank"
+                        class="btn btn-3 hover-border-1" id="btn-github">
+                        <span>Ir a Github</span>
+                    </a>
+                    <button type="button" class="btn btn-3 hover-border-1" id="btn-close" data-bs-dismiss="modal">
+                        <span>Cerrar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-proyect-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Pagina Web de Natacion</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-12 description">
+                            <h3>Resumen del Proyecto</h3>
+                            <h5>
+                                Fue un proyecto de la escuela, la página la desarrollamos mi equipo y yo.
+                                Te permite guardar, eliminar, actualizar los registros en una base de datos.
+                                Todos los formularios cuentan con sus respectivas validaciones, haciendo uso
+                                del AJAX para poder verificar lo que se pedía en dicho input.
+                            </h5>
+                            <h5>
+                                Aplicamos todo lo aprendido durante el cuatrimestre, como fue el crear PDF's
+                                con base en una librería, hacer uso del Fullcalendar con todas sus funcionalidades
+                                que tiene ya implementadas, etc.
+                            </h5>
+                            <h5>
+                                Fue de gran ayuda el realizar este proyecto para seguir practicando el desarrollo de
+                                páginas web.
+                            </h5>
+                        </div>
+                        <div class="col-12 video-text">
+                            <h3>Video</h3>
+                        </div>
+                        <div class="col-12 ratio ratio-16x9 video">
+                            <iframe src="https://www.youtube.com/embed/C7erOg9YJV8" title="YouTube" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/TheRialNiels/Pagina-Web-Natacion" target="_blank"
+                        class="btn btn-3 hover-border-1" id="btn-github">
+                        <span>Ir a Github</span>
+                    </a>
+                    <button type="button" class="btn btn-3 hover-border-1" id="btn-close" data-bs-dismiss="modal">
+                        <span>Cerrar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-proyect-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Portafolio</h2>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row justify-content-center">
+                        <div class="col-12 description">
+                            <h3>Resumen del Proyecto</h3>
+                            <h5>
+                                Creación de mi propio portafolio para poder demostrar los proyectos que he realizado,
+                                así como las skills que tengo en ciertos lenguajes de programación y más.
+                            </h5>
+                            <h5>
+                                El principal objetivo de este proyecto es poder presentarme de una manera mas formal
+                                con las empresas para que no solamente cuenten con un curriculum donde encontrarán
+                                pura letra, sino que tambien puedan ellos mismos apreciar los trabajos que he realizado,
+                                ver como codifico y con esto espero dar una mejor perspectiva sobre mí y puedan ver que
+                                soy apto para lo que ellos estén buscando.
+                            </h5>
+                            <h5>
+                                Me sirve para seguir aplicando lo aprendido y demostrar mis habilidades al desarrollar
+                                apps a pesar de ser proyectos pequeños.
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/TheRialNiels/Portfolio" target="_blank" class="btn btn-3 hover-border-1"
+                        id="btn-github">
+                        <span>Ir a Github</span>
+                    </a>
+                    <button type="button" class="btn btn-3 hover-border-1" id="btn-close" data-bs-dismiss="modal">
+                        <span>Cerrar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -304,198 +502,5 @@
     <script src="./assets/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"></script>
 </body>
-
-<!-- Modal -->
-<div class="modal fade" id="modal-proyect-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" id="staticBackdropLabel">Fenec Karting Game</h2>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row justify-content-center">
-                    <div class="col-12 description">
-                        <h3>Resumen del Proyecto</h3>
-                        <h5>
-                            El video juego fue desarrollado utilizando el motor gráfico de Unity, haciendo uso de una
-                            plantilla ya definida, que venía incluido todos los diseños de las pistas, coches, paisajes,
-                            etc.
-                        </h5>
-                        <h5>
-                            Se utilizó C Sharp para la creación de los scripts necesarios para el videojuego. Para
-                            realizar las funciones de recogida de objetos, desaparecerlos, etc.
-                        </h5>
-                    </div>
-                    <div class="col-12 video-text">
-                        <h3>Video</h3>
-                    </div>
-                    <div class="col-12 ratio ratio-16x9 video">
-                        <iframe src="https://www.youtube.com/embed/RzSPfFB0go4" title="YouTube" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="https://github.com/TheRialNiels/Fenec-Karting-Game" target="_blank"
-                    class="btn btn-3 hover-border-1" id="btn-github">
-                    <span>Ir a Github</span>
-                </a>
-                <button type="button" class="btn btn-3 hover-border-1" id="btn-close" data-bs-dismiss="modal">
-                    <span>Cerrar</span>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modal-proyect-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" id="staticBackdropLabel">Fenec 3D Platform Game</h2>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row justify-content-center">
-                    <div class="col-12 description">
-                        <h3>Resumen del Proyecto</h3>
-                        <h5>
-                            El video juego fue desarrollado utilizando el motor gráfico de Unity,
-                            se hizo casi todo desde cero, unicamente se obtuvieron las skins de los jugadores y del
-                            ambiente de una plantilla ya hecha.
-                        </h5>
-                        <h5>
-                            Todos los scripts se hicieron utilizando C sharp, para
-                            permitir la movilidad dentro del juego, así como dar las funcionalidades de matar enemigos,
-                            que los enemigos disparen objetos, etc.
-                        </h5>
-                    </div>
-                    <div class="col-12 video-text">
-                        <h3>Video</h3>
-                    </div>
-                    <div class="col-12 ratio ratio-16x9 video">
-                        <iframe src="https://www.youtube.com/embed/VJ0nu7Xi5TY" title="YouTube" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="https://github.com/TheRialNiels/Fenec-3D-Platform-Game" target="_blank"
-                    class="btn btn-3 hover-border-1" id="btn-github">
-                    <span>Ir a Github</span>
-                </a>
-                <button type="button" class="btn btn-3 hover-border-1" id="btn-close" data-bs-dismiss="modal">
-                    <span>Cerrar</span>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modal-proyect-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" id="staticBackdropLabel">Pagina Web de Natacion</h2>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row justify-content-center">
-                    <div class="col-12 description">
-                        <h3>Resumen del Proyecto</h3>
-                        <h5>
-                            Fue un proyecto de la escuela, la página la desarrollamos mi equipo y yo.
-                            Te permite guardar, eliminar, actualizar los registros en una base de datos.
-                            Todos los formularios cuentan con sus respectivas validaciones, haciendo uso
-                            del AJAX para poder verificar lo que se pedía en dicho input.
-                        </h5>
-                        <h5>
-                            Aplicamos todo lo aprendido durante el cuatrimestre, como fue el crear PDF's
-                            con base en una librería, hacer uso del Fullcalendar con todas sus funcionalidades
-                            que tiene ya implementadas, etc.
-                        </h5>
-                        <h5>
-                            Fue de gran ayuda el realizar este proyecto para seguir practicando el desarrollo de
-                            páginas web.
-                        </h5>
-                    </div>
-                    <div class="col-12 video-text">
-                        <h3>Video</h3>
-                    </div>
-                    <div class="col-12 ratio ratio-16x9 video">
-                        <iframe src="https://www.youtube.com/embed/C7erOg9YJV8" title="YouTube" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="https://github.com/TheRialNiels/Pagina-Web-Natacion" target="_blank"
-                    class="btn btn-3 hover-border-1" id="btn-github">
-                    <span>Ir a Github</span>
-                </a>
-                <button type="button" class="btn btn-3 hover-border-1" id="btn-close" data-bs-dismiss="modal">
-                    <span>Cerrar</span>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="modal-proyect-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-scrollable">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" id="staticBackdropLabel">Portafolio</h2>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row justify-content-center">
-                    <div class="col-12 description">
-                        <h3>Resumen del Proyecto</h3>
-                        <h5>
-                            Creación de mi propio portafolio para poder demostrar los proyectos que he realizado,
-                            así como las skills que tengo en ciertos lenguajes de programación y más.
-                        </h5>
-                        <h5>
-                            El principal objetivo de este proyecto es poder presentarme de una manera mas formal
-                            con las empresas para que no solamente cuenten con un curriculum donde encontrarán
-                            pura letra, sino que tambien puedan ellos mismos apreciar los trabajos que he realizado,
-                            ver como codifico y con esto espero dar una mejor perspectiva sobre mí y puedan ver que
-                            soy apto para lo que ellos estén buscando.
-                        </h5>
-                        <h5>
-                            Me sirve para seguir aplicando lo aprendido y demostrar mis habilidades al desarrollar
-                            apps a pesar de ser proyectos pequeños.
-                        </h5>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <a href="https://github.com/TheRialNiels/Portfolio" target="_blank" class="btn btn-3 hover-border-1"
-                    id="btn-github">
-                    <span>Ir a Github</span>
-                </a>
-                <button type="button" class="btn btn-3 hover-border-1" id="btn-close" data-bs-dismiss="modal">
-                    <span>Cerrar</span>
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
 
 </html>
