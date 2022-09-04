@@ -8,7 +8,6 @@ Se estará actualizando cada que se realice un nuevo proyecto.
 - HTML & CSS
 - Bootstrap
 - Google fonts
-- Imágenes de UNSPLASH
 - AOS
 
 ## Resources
@@ -19,4 +18,3 @@ Se estará actualizando cada que se realice un nuevo proyecto.
 [Codepen](https://codepen.io/trending)
 [Google Fonts](https://fonts.google.com/)
 [AOS](https://michalsnik.github.io/aos/)
-[Unsplash](https://unsplash.com/)
