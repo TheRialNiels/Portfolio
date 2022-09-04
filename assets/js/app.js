@@ -204,7 +204,7 @@ AOS.init({
 //##################  Animacion de Escribir  ##################
 $(function () {
     $(".typed").typed({
-        strings: ["El Ajedrez.", "El Trading.", "Jugar Video Juegos.", "Programar."],
+        strings: ["El Ajedrez.", "El Trading.", "Hacer Ejercicio", "Jugar Video Juegos.", "Programar."],
         // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
         stringsElement: null,
         // typing speed
